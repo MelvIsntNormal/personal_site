@@ -1,6 +1,6 @@
 {
   "name": "melvisntnormal",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "My personal site",
   "main": "bin/server.coffee",
   "scripts": {
@@ -8,12 +8,19 @@
   },
   "author": "Melvin Sowah",
   "license": "ISC",
+  "dependencies": {
+    "asyncawait": "^1.0.3",
+    "express": "^4.13.4",
+    "jade": "^1.11.0",
+    "less": "^2.7.1",
+    "merge": "^1.2.0",
+    "promisify-node": "^0.4.0",
+    "pug": "^2.0.0-beta3"
+  },
   "devDependencies": {
     "cake": "^0.1.1",
     "chokidar": "^1.5.2",
-    "express": "^4.13.4",
-    "less": "^2.7.1",
     "mocha": "^2.5.3",
-    "promisify-node": "^0.4.0"
+    "object-merge": "^2.5.1"
   }
 }
