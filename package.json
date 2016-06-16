@@ -1,0 +1,19 @@
+{
+  "name": "melvisntnormal",
+  "version": "0.0.1",
+  "description": "My personal site",
+  "main": "bin/server.coffee",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Melvin Sowah",
+  "license": "ISC",
+  "devDependencies": {
+    "cake": "^0.1.1",
+    "chokidar": "^1.5.2",
+    "express": "^4.13.4",
+    "less": "^2.7.1",
+    "mocha": "^2.5.3",
+    "promisify-node": "^0.4.0"
+  }
+}
