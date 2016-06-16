@@ -1,6 +1,6 @@
 {
   "name": "melvisntnormal",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "My personal site",
   "main": "bin/server.coffee",
   "scripts": {
