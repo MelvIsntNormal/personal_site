@@ -12,8 +12,10 @@ do async ->
   app.set 'view engine', 'pug'
 
   app.get '/', async (req, res) ->
-    res.send await dbc.any('select * from users')
+    res.render 'index'
 
+  app.get '/static/app.css', async (req, res) ->
+    res.sendFile "#{__dirname}/public/app.css"
   app.all '/api', (req, res, next) ->
     req.forAPI = true
     do next
