@@ -5,8 +5,6 @@ pgp = do require 'pg-promise'
 
 devfeatures = async (app)->
   controllers = require('./controllers')(express.Router)
-  app.get '/static/app.css', async (req, res) ->
-    res.sendFile "#{__dirname}/public/app.css"
 
   app.all '/api', (req, res, next) ->
     req.forAPI = true
@@ -26,6 +24,11 @@ do async ->
 
   app.get '/', async (req, res) ->
     res.render 'index'
+
+  app.get '/static/app.css', async (req, res) ->
+    res.sendFile "#{__dirname}/public/app.css"
+
+  app.get '/*', (req, res) -> res.redirect '/'
 
   if config.env is 'development' then devfeatures app
   
