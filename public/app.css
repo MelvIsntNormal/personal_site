@@ -66,6 +66,13 @@ section.embed-msg {
   max-width: 50%;
 }
 
+@media(max-width: 600px) {
+  section.embed-msg {
+    min-width: 270px;
+    max-width: 270px;
+  }
+}
+
 section.embed-msg header {
   background-color: hsl(0, 10%, 92%);
   padding: 12px;
