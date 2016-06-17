@@ -1,5 +1,4 @@
-module.exports = (Router) ->
-  UserController = do Router
+module.exports = (UserController) ->
 
   UserController.get '/', (req, res) ->
     res.send 'Hello, User!'
