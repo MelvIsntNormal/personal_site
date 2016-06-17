@@ -4,12 +4,14 @@
   "description": "My personal site",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "coffee": "command -v coffee || echo ./node-modules/coffee-script/bin/coffee",
     "start": "coffee server.coffee"
   },
   "author": "Melvin Sowah",
   "license": "ISC",
   "dependencies": {
     "asyncawait": "^1.0.3",
+    "coffee-script": "^1.10.0",
     "dotenv": "^2.0.0",
     "express": "^4.13.4",
     "jstransformer-markdown": "^1.1.0",
