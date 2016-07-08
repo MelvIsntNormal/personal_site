@@ -1,0 +1,110 @@
+@import 'https://fonts.googleapis.com/css?family=Raleway:400,700|Roboto+Slab:300,400,700|Roboto+Mono:400,500';
+
+* {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 3em;
+}
+
+p {
+  margin: 10px 0;
+  font-size: 1.2em;
+}
+
+p, p * {
+  font-family: 'Roboto Slab', serif;
+  font-weight: 300;
+}
+
+strong {
+  font-weight: 700;
+}
+
+em {
+  font-style: italic;
+}
+
+code {
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 400;
+  font-size: 0.9em;
+  background-color: hsl(0, 0%, 80%);
+  padding: 0 5px;
+  border-radius: 5px;
+}
+
+a {
+  transition: 0.2s color ease-in-out;
+  color: navy;
+  text-decoration: none;
+}
+
+a:hover {
+  transition: 0.2s color ease-in-out;
+  color: hsl(230, 80%, 60%);
+}
+
+a:visited {
+  transition: 0.2s color ease-in-out;
+  color: hsl(230, 30%, 50%);
+}
+
+html, body, .app {
+  width: 100%;
+  height: 100%;
+}
+
+.app {
+  display: flex;
+  background-color: lightgrey;
+}
+
+main {
+  height: calc(100% - 40px);
+  flex-grow: 1;
+  padding: 20px 150px;
+  overflow-y: auto;
+}
+
+main > * {
+  margin: 0 120px;
+  margin-bottom: 20px;
+  background-color: hsl(0, 0%, 94%);
+  padding: 50px;
+  border-radius: 3px;
+  box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 1599px) {
+  main > * {
+    width: 960px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 1359px) {
+  main > * {
+    width: calc(100% - 100px);
+    margin: 0;
+  }
+}
+
+@media (max-width: 879px) {
+  main {
+    padding: 20px calc((100% - 580px) / 2);
+  }
+}
+
+@media (max-width: 589px) {
+  main {
+    height: 100%;
+    padding: 0;
+  }
+}

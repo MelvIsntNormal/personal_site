@@ -1,34 +1,19 @@
 {
   "name": "melvisntnormal",
-  "version": "0.0.4",
-  "description": "My personal site",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "coffee": "command -v coffee || echo ./node-modules/coffee-script/bin/coffee",
-    "start": "coffee server.coffee"
+    "start": "node ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com/MelvIsntNormal/personal_site"
   },
   "author": "Melvin Sowah",
   "license": "ISC",
   "dependencies": {
-    "asyncawait": "^1.0.3",
-    "body-parser": "^1.15.2",
-    "coffee-script": "^1.10.0",
-    "cookie-parser": "^1.4.3",
-    "dotenv": "^2.0.0",
-    "express": "^4.13.4",
-    "express-session": "^1.13.0",
-    "jstransformer-markdown": "^1.1.0",
-    "markdown-it": "^6.0.5",
-    "node-pg-migrate": "0.0.10",
-    "object-merge": "^2.5.1",
-    "pg-promise": "^4.6.4",
-    "promisify-node": "^0.4.0",
-    "pug": "^2.0.0-beta3",
-    "stylus": "^0.54.5"
-  },
-  "devDependencies": {
-    "cake": "^0.1.1",
-    "chokidar": "^1.5.2",
-    "mocha": "^2.5.3"
+    "express": "^4.14.0"
   }
 }
