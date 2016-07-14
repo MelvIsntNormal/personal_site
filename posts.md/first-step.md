@@ -1,0 +1,37 @@
+# The First Step
+
+For the first eighteen years of my life, I thought that I just had to make one great thing, and I'd become an instant hit.
+
+I remember thinking that when I was a teenager, when I bought RelamCrafter thinking that I could make an MMO and make money off it... no, even before that, when I used Eclipse. No, not the IDE, the 2D game engine. It was a weird and wonderful piece of kit.
+
+I loved making games. I loved building systems, clubs adventures for others to be a part of. Back in primary school, I made a club based on Tamagotchis where members would trade items for real life Gotchi Points. In hindsight, I'm surprised it worked.
+
+I've never been successful in any of my ventures. I started to lose hope, and never really realised that my method of doing things wasn't actually getting me anywhere. It was madness to think that I could become an overnight hit with one idea. It can happen, but it wasn't likely. I know that now.
+
+I grew up over the last couple of years. I started letting go of perfection. I started realising that I don't actually *know* anything. I'm creative, but I'm not realistic. I have a load of facts in my head, but not enough practice to execute them. I have a wealth of abilities, tools at are all rusty from disuse because I keep looking for the next shiny trendy skill that every entrepreneur must have.
+
+Throughout secondary school, at least from year 8, I was never really me. Not like I was back in primary school, where I was just messing with ideas and having fun with them (sneaking around my mother who didn't want me to go into computer science, the same field she's in herself). It became worse after GCSE's when I realised I need to make a living at some point. I started trying to push myself to be successful in all the wrong ways. I became overwhelmed, disinterested, frustrated, burned out. It took messing up my A-Levels and going through two years of change to realise how I've damaged myself.
+
+My name is Melvin Sowah.  
+I'm 20 years and eleven days old, and I'll be starting my first year at the University of Manchester this September. I call myself a "discreet mathematician" essentially meaning that I couldn't choose between maths and theoretical computer science, so I'm doing a joint degree.
+
+I used to be Melvin Sowah, an idiot who *thought* he knew everything, thought everything would just work out, and thought he didn't really need to put in much effort... well, I was never really that person. I myself always tried to work hard, but there was always a little part of me that had more influence over me than my actual self. So much so, that was the persona I showed to others. That was the mindset that influenced my actions, and ultimately resulted in me falling hard on my A-Levels, giving up on project after project after it got too difficult, and not really growing anything other than a sense of failure and depression.
+
+I took the first step. A two-year long step to what I want to be in the future. I gave up the idea that I could coast through life. I gave up the idea that I knew all there was to know about programming. I was humbled by those at my first university. I looked myself in the mirror and understood why I've never been in a relationship.
+
+I connected with my younger, child-like self again. The self that loves to learn and play. The self that always tried to be happy. The me that always tried to be grateful for what he had. The person that wanted everyone else to be happy as well.
+
+I kept telling myself that my first job as a barback broke me. I kept telling myself that the guy I'm living with next year broke me. They did quite the opposite. If it wasn't for my dad forcing me into a job that had me working until I could see daylight again, if it wasn't for making friends at the uni I first went to, if it wasn't for meeting my new friend on Manchester's Foundation Year, I'd still be trying to perfect my website. 
+
+Instead of showing my flaws, what I can't do, what I don't know, I'd be trying to pretend that I know what I'm talking about (like when I mentioned the "dereferencing selection operator" in the first lecture with aforementioned foundation year friend).
+
+My wish for this site is to be a record of how I grow from here on out. It is bare bones and simple for a reason. I'll be adding more content in the form of blog posts and projects, even YouTube videos. I'll also be adding more features to practice my skills. Over time, I hope that this website will evolve to show what I've learned through both itself and what it contains.
+
+I won't be posting about just programming on here. I'll be posting about anything that comes to mind really. Anything that interests me and provokes thought. Anything I want to discuss with anyone else. Anything I want another perspective on.
+
+I'm hoping that by doing so, I'll never stop growing. I'm hoping that I will never do what I did back then, and think that I can take on the world without much thought. I know better than that now.
+
+Thanks for reading this. You can connect with me [via Twitter][twitter] to stay updated with this site. If you would like to reach me, you can Tweet or [email me][email], and I'll try and reply as quickly as I can.
+
+  [twitter]: <https://twitter.com/melvisntnormal> "Tweet me!"
+  [email]: <mailto:melvisntnormal@gmail.com> "Email me!"

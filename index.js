@@ -12,7 +12,7 @@ var
 app.use('/styles', express.static('styles'));
 
 app.get('/', function(req, res) {
-  res.sendFile('hello-world.html', fileOpts);
+  res.sendFile('index.html', fileOpts);
 });
 
 app.get('/post/:post', function(req, res) {
