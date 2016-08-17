@@ -1,0 +1,26 @@
+doctype html
+
+html
+
+  head
+    title= page.title
+    link(rel="stylesheet", href="/styles/app.css")
+    meta(charset="utf8")
+    meta(name="viewport", content="initial-scale=1;")
+
+
+  body
+    .app
+      input#app-context-collapser.collapser(type='checkbox', checked)
+      aside.context
+        .content
+          block app-context
+        footer
+          span
+          
+      .vbox
+        main
+          .content
+            block page-content
+        footer.action-bar
+          label.collapser(for='app-context-collapser')

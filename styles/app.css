@@ -40,6 +40,15 @@ code {
   border-radius: 5px;
 }
 
+blockquote {
+  font-style: italic;
+  font-size: 1.3em;
+  border-left: 10px solid hsl(0, 0%, 70%);
+  padding: 10px 20px;
+  margin: 20px;
+  color: hsl(0, 0%, 50%);
+}
+
 a {
   transition: 0.2s color ease-in-out;
   color: navy;
@@ -63,19 +72,86 @@ html, body, .app {
 
 .app {
   display: flex;
-  background-color: lightgrey;
+  background-color: hsl(0, 0%, 70%);
+}
+
+.app .context {
+  height: 100%;
+  width: 300px;
+  transition: 0.3s ease-in-out width;
+  background-color: hsl(238, 70%, 12%);
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.app .context > * {
+  width: 300px;
+  position: relative;
+  right: 0;
+  color: white;
+}
+
+.app .context .content {
+  flex-grow: 1;
+}
+
+.app .context footer {
+  height: 50px;
+  display: flex;
+}
+
+.app .context footer span {
+  flex-grow: 1;
+}
+
+input.collapser {
+  display: none;
+}
+
+label.collapser {
+  display: block;
+  width: 50px;
+  height: 50px;
+  background-color: grey;
+}
+
+input.collapser:checked + aside.context {
+  width: 0;
+}
+
+.app > * {
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.vbox {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 main {
-  height: calc(100% - 40px);
+  overflow-y: auto;
   flex-grow: 1;
-  padding: 20px 150px;
+}
+
+main .content {
+  margin: 10px auto;
+  width: 1060px;
   overflow-y: auto;
 }
 
-main > * {
-  margin: 0 120px;
-  margin-bottom: 20px;
+main .content > * {
+  margin: 10px 0;
+}
+
+.vbox .action-bar {
+  min-height: 50px;
+  background-color: hsl(0, 0%, 85%);
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
+}
+
+article {
   background-color: hsl(0, 0%, 94%);
   padding: 50px;
   border-radius: 3px;
@@ -83,28 +159,35 @@ main > * {
 }
 
 @media (max-width: 1599px) {
-  main > * {
-    width: 960px;
-    margin: 0 auto;
+  main .content {
+    margin: 10px 120px;
+    width: auto;
   }
 }
 
 @media (max-width: 1359px) {
-  main > * {
-    width: calc(100% - 100px);
+  main .content {
+    margin: 10px auto;
+    width: 820px;
+  }
+}
+
+@media (max-width: 1159px) {
+  main .content {
+    margin: 0;
+    width: 100%;
+    flex-grow:  1;
+  }
+  
+  main .content > * {
     margin: 0;
   }
 }
 
 @media (max-width: 879px) {
-  main {
-    padding: 20px calc((100% - 580px) / 2);
-  }
+  
 }
 
 @media (max-width: 589px) {
-  main {
-    height: 100%;
-    padding: 0;
-  }
+  
 }
