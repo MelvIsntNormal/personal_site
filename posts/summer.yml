@@ -1,0 +1,26 @@
+name: summer
+title: Summer
+author: Melvin
+created_on: 2016-08-24
+updated_on: 2016-08-24
+content: |
+  # Summer
+
+  I've gotten used to long summer breaks very quickly. It doesn't feel weird anymore, just slightly painful.
+
+  I officially finished uni on the eighth of June, and I'm supposed to be back on the fifteenth of September, fourteen weeks later. I left two weeks "late" and I'm coming back two weeks "early".
+
+  Summer has turned from a break into a chore for me. I think I'm on my way to becoming a workaholic. To be honest, I think I was always a workaholic, but I was just working on the wrong things at the wrong time. But summer has never felt like this. I'm restless. I'm waiting to get back to my own space where I make my own choices. I'm waiting to get back to an environment that I can actually function in.
+
+  This won't make total sense for a while. When I figure out what I want to say, I'll come back to this. Some people may actually know what I'm going through, and if they do, I'd encourage them to [please, *please* help me...][twitter].
+
+  I've made a couple of tweaks to the site, adding a collapsible sidebar, rewriting CSS and adding a template system. I'm using [Pug][pug] for the layout engine, along with Express. I'm storing posts in YAML files for now, just until I implement a database. I thought I'd get this done two weeks ago, but summer got in the way. I really wish I knew how to explain...
+
+  For my next little task, I'll be moving my CSS over to [Stylus][stylus], adding a clearer button for collapsing the sidebar, and tidying up the styles for the sidebar.
+
+  I'll definitely have this ready for the second of September, so just over a week from now. I move into my new place on Thursday, and I'll finally have my life back. I can't wait.
+
+  [twitter]: <twitter.com/melvisntnormal> "Tweet me!"
+  [pug]: <jade-lang.com> "Pug (formerly Jade)"
+  [stylus]: <stylus-lang.com> "Stylus"
+

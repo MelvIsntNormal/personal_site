@@ -1,7 +1,8 @@
 extends ./app
 
 block page-content
-  article!= post.renderedContent
+  article
+    != post.renderedContent
 
 block app-context
   section#post.widget

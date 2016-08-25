@@ -18,7 +18,7 @@
     "express": "^4.14.0",
     "jstransformer": "^1.0.0",
     "jstransformer-mmd": "0.0.2",
-    "pug": "^2.0.0-beta5",
+    "pug": "git+https://github.com/pugjs/pug.git",
     "stylus": "^0.54.5",
     "yamljs": "^0.2.8"
   }

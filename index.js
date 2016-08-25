@@ -6,27 +6,20 @@ const
   MMD = require('jstransformer')(require('jstransformer-mmd')),
   readDirectory = require('fs').readdirSync;
 
-function loadPosts() {
-  let directory = __dirname + '/posts';
-
-  return readDirectory(directory)
-    .map(filename => ({ 
-      file: directory + '/' + filename, 
-      filename: filename
-    }))
-    .map((options) => Object.assign(YAML.load(options.file), {
-      url: options.filename.slice(0, -4)
-    }))
+let loadPosts = directory => 
+  readDirectory(directory)
+    .map(filename => directory + '/' + filename)
+    .map(filepath => YAML.load(filepath))
+    .map((data) => Object.assign(data, {url: '/post/' + data.name}))
     .reduce((posts, currentPost) => posts.concat([currentPost]), [])
-    .sort((a, b) => a.created_on - b.created_on);
-}
+    .sort((a, b) => b.created_on - a.created_on);
 
 let 
   app       = express(),
   port      = process.env.PORT || 8080,
   hostname  = process.env.HOSTNAME || 'localhost',
   data      = {
-    post: loadPosts()
+    post: loadPosts(__dirname + '/posts')
   },
   fileOpts  = {
     root:     __dirname + '/posts/',
@@ -39,17 +32,17 @@ app.set('view engine', 'pug');
 app.use('/styles', express.static('styles'));
 
 app.get('/', (req, res) => {
-  res.sendFile('index.html', fileOpts);
+  res.redirect(data.post[0].url);
 });
 
-app.get('/post/:post', (req, res) => {
+app.get('/post/:name', (req, res) => {
   let context = {
-    post: data.post.find((post) => post.url === req.params.post),
+    post: data.post.find((post) => post.name === req.params.name),
     appContext: {
       post: {
         list: data.post.map(post => ({
           title: post.title, 
-          url: '/post/' + post.url
+          url: post.url
         }))
       }
     }
@@ -58,7 +51,6 @@ app.get('/post/:post', (req, res) => {
        context.post.renderedContent 
     || MMD.render(context.post.content).body;
   context.page = {title: context.post.title};
-  console.log(context);
   res.render('post', context);
 });
 
@@ -67,6 +59,6 @@ app.all('/*', (req, res) => {
 });
 
 app.listen(port, hostname, () => {
-  console.log(data.post.map((post) => [post.title, post.url, post.created_on]));
+  // console.log(data.post.map((post) => [post.title, post.url, post.created_on]));
   console.log('Listening to ' + hostname + ':' + port + '...');
 });
