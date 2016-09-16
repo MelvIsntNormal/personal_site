@@ -1,0 +1,30 @@
+name: futures-promises
+title: Futures and Promises
+author: Melvin
+created_on: 2016-09-16
+updated_on: 2016-09-16
+content: |
+  # Futures and Promises
+
+  I never really anticipated how difficult it would be to write an extension that [removed things from YouTube's comment section][ytcplus].
+
+  I spent ages rewriting the Plus Blocker, which is now called YouTube Comments+. The initial draft I did uncovered the horrifying div-soup that is the comments section. That would have been a minor inconvenience if everything was there at once. I learned a lot about promises and streams while writing that extension.
+
+  Until about two years ago, I only really wrote *synchronous* code: that is, all of my code had a definite sequence of execution. I knew when things would happen, and I could trace things easily. I didn't think about blocking threads or long-running HTTP requests.
+
+  I first came across promises in the Play! Framework, and completely misunderstood them. When I discovered Dart, I took a much more active interest in client-side coding, and learned more about how JavaScript worked. I again thought wrongly that all *asynchronous* code is automatically executed in another thread. Multi-threading is a good thing, right? I basically abused the `async` and `await` keywords when they were introduced.
+
+  I still don't understand the difference between Promises in JavaScript and Futures in Dart, but I use them extensively. I understand more about concurrent programming now than I did two years ago. The extension was a great learning experience in this regard.
+
+  It's been about three weeks since I last updated this site. In that time, I moved out of my parents house, moved into a flat in Manchester, had a million and one things going on with meeting new people, looking for jobs, banging my head against a wall when YouTube wouldn't cooperate with my "perfect" code... then realising I had misspelt "existing" in one of the keys of my objects.
+
+  I didn't account for how hectic things would be. I need to be more sparing with my real-life promises in the future.
+
+  In this update, I've added some basic CSS to the sidebar, and moved my CSS to Stylus. It took me ages to get the middleware to work, making me appreciate Rails more. I've been investigating React and ES6 a lot more, and while React won't make it into my site for a long time, I've been trying to use more ES6 stuff server-side.
+
+  For my next task, I'll need to display the dates of when my posts are published. The dates are just sitting there in the YAML files I wrote, I just need to write the JavaScript for it. The button didn't make it into this release, since I wanted it to be animated. I'll stick to a static button for now.
+
+  I have my first job interview in a few hours. I think it's time to get back to studying React.
+
+  [ytcplus]: <https://chrome.google.com/webstore/detail/youtube-plus-filter/lhjhfienbklemmabjgkepbiihihnhacg> "YouTube Comments+"
+

@@ -8,7 +8,8 @@ block app-context
   section#post.widget
     header
       h1: |Posts
-    ol
-      each post in appContext.post.list
-        li
-          a(href=post.url)= post.title
+    .content
+      ol
+        each post in appContext.post.list
+          li
+            a(href=post.url)= post.title
