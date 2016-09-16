@@ -1,64 +1,83 @@
 'use strict';
 
-const 
-  express = require('express'),
-  YAML = require('yamljs'),
-  MMD = require('jstransformer')(require('jstransformer-mmd')),
-  readDirectory = require('fs').readdirSync;
+const // Imports
+  express       = require('express'),
+  YAML          = require('yamljs'),
+  MMD           = require('jstransformer')(require('jstransformer-mmd')),
+  stylus        = require('express-stylus'),
+  readDirectory = require('fs').readdirSync,
+  join          = require('path').join;
 
 let loadPosts = directory => 
   readDirectory(directory)
-    .map(filename => directory + '/' + filename)
+    .map(filename => join(directory, filename))
     .map(filepath => YAML.load(filepath))
-    .map((data) => Object.assign(data, {url: '/post/' + data.name}))
+    .map((data) => Object.assign(data, {url: `/post/${data.name}`}))
     .reduce((posts, currentPost) => posts.concat([currentPost]), [])
     .sort((a, b) => b.created_on - a.created_on);
 
 let 
-  app       = express(),
-  port      = process.env.PORT || 8080,
-  hostname  = process.env.HOSTNAME || 'localhost',
-  data      = {
-    post: loadPosts(__dirname + '/posts')
+  app         = express(),
+  port        = process.env.PORT || 8080,
+  hostname    = process.env.HOSTNAME || 'localhost',
+  environment = process.env.ENVIRONMENT || 'production',
+
+  paths       = {
+    post: join('.', 'posts'),
+    style: {
+      source: join('.', 'assets', 'styles'),
+      dest:   join('.', 'public', 'styles'),
+    },
+    view: join('.', 'layouts'),
+    public: join('.', 'public')
   },
-  fileOpts  = {
-    root:     __dirname + '/posts/',
-    dotfiles: 'ignore'
+
+  data        = {
+    post: loadPosts(paths.post)
+  },
+
+  stylusOpts  = {
+    src:        paths.style.source,
+    dest:       paths.style.dest,
+    force:      environment === 'development',
+    compress:   environment ==! 'development',
+    sourcemap:  environment === 'development'
   };
 
-app.set('views', './layouts');
+
+app.set('views', paths.view);
 app.set('view engine', 'pug');
 
-app.use('/styles', express.static('styles'));
+app.use('/styles', stylus(stylusOpts));
 
 app.get('/', (req, res) => {
   res.redirect(data.post[0].url);
 });
 
 app.get('/post/:name', (req, res) => {
-  let context = {
-    post: data.post.find((post) => post.name === req.params.name),
-    appContext: {
-      post: {
-        list: data.post.map(post => ({
-          title: post.title, 
-          url: post.url
-        }))
+  let
+    post = data.post.find(post => post.name === req.params.name),
+    postList = data.post.map(post => ({
+      title: post.title, 
+      url: post.url
+    })),
+    context = {
+      post: post,
+      page: {title: post.title},
+      appContext: {
+        post: {
+          list: postList
+        }
       }
-    }
-  };
-  context.post.renderedContent = 
-       context.post.renderedContent 
-    || MMD.render(context.post.content).body;
-  context.page = {title: context.post.title};
+    };
+
+  post.renderedContent = post.renderedContent || MMD.render(post.content).body;
+
   res.render('post', context);
 });
 
-app.all('/*', (req, res) => {
-  res.redirect('/');
-});
+app.use(express.static(paths.public));
 
 app.listen(port, hostname, () => {
-  // console.log(data.post.map((post) => [post.title, post.url, post.created_on]));
-  console.log('Listening to ' + hostname + ':' + port + '...');
+  console.log(`Listening to ${hostname}:${port}...`);
 });
